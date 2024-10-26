@@ -27,9 +27,35 @@ class Avion(Vehiculo):
   def __str__(self) -> str:
     return "Avión de color {}, que alcanza una velocidad de {}kms/hs, su estado es {} con un motor {}, capacidad de pasajeros {}, llega a una altitud de {} mts. y posee {} ventanas.".format(self.color, self.velocidad, self.estado, self.motor, self.pasajeros, self.altitud, self.ventanas)
 
+## Se agrega un nuevo objeto por herencia, utilizando los atributos de la clase padre.
+class Moto(Vehiculo):
+  def __init__(self, color, velocidad, estado, motor, ruedas, tipo) -> None:
+    super().__init__(color, velocidad, estado, motor)
+    self.ruedas = ruedas
+    self.tipo = tipo
+  
+  def __str__(self) -> str:
+    return "Moto de color {} que alcanza una velocidad de {}kms/hs, su estado es {}, consta de un motor {}, tiene {} ruedas y su modelo es {}.".format(self.color, self.velocidad, self.estado, self.motor, self.ruedas, self.tipo)
+  
+  
+
 ## Impresión directa de la clase y sus valores pasados directamente.
 print(Vehiculo('verde', 350, 'usado', 'V8'))
 
 ## Impresión de la clase mediante una variable generada previamente para luego ser llamada para imprimir.
 secon_print = Avion('rojo', 700, 'nuevo', 'Boeing 747', 6, 10.000, 8)
 print(secon_print)
+
+## En este caso se imprimen los valores mediante las diversas variables
+# También se pueden ingresar los datos a través de la solicitud al usuario
+color = input("Ingrese color: ")
+velocidad = 500
+estado = input("Ingrese estado de moto: ")
+motor = 'brrtx2000'
+ruedas = 2
+modelo = '1500cc'
+print(f'''
+-------------------------------------------------------------------------------
+  {Moto(color, velocidad, estado, motor, ruedas, modelo)}
+-------------------------------------------------------------------------------
+      ''')
