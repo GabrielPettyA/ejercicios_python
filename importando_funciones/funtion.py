@@ -10,5 +10,13 @@ class Person():
   def __str__(self):
     return "nombre: {}, apellido: {}, edad: {}".format(self.name, self.last_name, self.age)
 
+    '''
+    TAMBIÉN SE PUEDE UTILIZAR EN 'def __str__(self):' de la siguiente forma...
+    def __str__(self):
+      return super().__str__() + "ejemplo de texto {}, otro ejemplo de texto {}
+      etc, etc".format(self.ejemplo, self.ejemplo......)
+      
+    '''
+
 
 
