@@ -1,5 +1,29 @@
 ## DEFINIR UNA FUNCIÓN QUE TOME DOS O MÁS ARGUMENTOS Y QUE DEVUELVA EL MAYOR DE ELLOS ##
 
+def funcion_max(n1, n2):
+  if n1 > n2:
+    return n1
+  else:
+    return n2
+print(funcion_max(500, 600)) # Imprimiendo directamente
+
+
+## Una forma también puede ser utilizando la función anterior con la nueva.
+
+def comparar_mayor(n1,n2,n3):
+  a = funcion_max(n1,n2)
+  if n3 < a:
+    if n1 > n2:
+      return n1
+    else:
+      return n2
+  else:
+    return n3
+
+print("El número mayor utilizando la función anterior es: ",comparar_mayor(2000,2525,-3415))
+
+
+
 def argumento_max(num1:int, num2:int, num3:int):
 
 ## Se realiza un resumen del ejercicio a desarrollar.
@@ -84,7 +108,7 @@ print("El número mayor es el ==> {}".format(mayor))
 
 def argument_num(num1:int, num2:int, num3:int):
 
-## Se realiza un resumen del ejercicio a desarrollar.
+## Una forma prolija de mostrar ejercicios resueltos es mediante la presentación de un resumen de cómo se desarrolla el ejercicio, detallando sus argumentos, retornos y lógica empleada para su resolución.
 
   """Se retorna el mayor de los tres números ingresados.
 
@@ -110,9 +134,14 @@ def argument_num(num1:int, num2:int, num3:int):
   else:
     pass
   raise Exception("\nError: para operar no puede haber números repetidos") # Capturando el Error.
-  
-
-
 
 may = argument_num(10,6,1)
 print("El número mayor es: {}".format(may))
+
+# otra forma de mostrar los datos es llamando a las distintas variables
+
+num1 = 20
+num2 = 15
+num3 = -1564
+num_mayor = argument_num(num1, num2, num3)
+print("El Nuevo número mayor entre {} - {} y {} es: {}".format(num1, num2, num3, num_mayor))
