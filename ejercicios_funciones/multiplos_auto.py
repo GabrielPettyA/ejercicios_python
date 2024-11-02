@@ -1,8 +1,7 @@
 
 '''
-TAMBIÉN SE PUEDE UTILIZAR NUEVAMENTE LA ESTRUCTURA
-FIBONACCI PARA OBTENER LOS MÚLTIPLOS DE LOS NÚMEROS 
-QUE GENERA AUTOMÁTICAMENTE LA PROPIA MULTIPLICACIÓN INICIANDO, EN ESTE CASO, POR EL NÚMERO PAR '2'.
+OBTENIENDO EL DOBLE DE LOS VALORES DADOS AUTOMÁTICAMENTE
+UTILIZANDO EL PROCESO FIBONACCI.
 '''
 
 list = []
@@ -10,8 +9,8 @@ list = []
 def multiplo_auto(n1):
   a, b = 0, 1
   while a < n1:
-    a, b = b, a*2 # Se puede utilizar cualquier multiplicador superior a 1 (ejemplo: 1.01 etc.)
-    if a != 0 and a != b and a != 1:
+    a, b = b, a*2 # Se puede utilizar cualquier multiplicador superior a 1 (ejemplo: 1.01, 3, etc.)
+    if a != 0 and a != 1:
       list.append(a)
     else:
       pass
