@@ -41,3 +41,36 @@ def clave_auto():
 clave_auto()
 
 # Fin de función
+
+
+# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
+
+# Otra forma de hacerlo es utilizando los boolean.
+
+def other_clave_auto():
+  
+  valore = str.ascii_letters + str.digits + str.ascii_uppercase + str.ascii_lowercase
+  
+  long = 8
+  if long > 0:
+    cont = True
+    clave2 = " ".join(random.choice(valore) for index in range(long))
+    
+    if cont:
+      print(f'''
+      -------------------------------
+      La clave:
+                          
+                  {clave2}
+      -------------------------------
+      ''')
+
+  else:
+    cont = False
+    print("ERROR: falta ingresar longitud de clave.")
+
+other_clave_auto()
+
+
+
